@@ -1,0 +1,20 @@
+/*提交、重設按鈕*/
+#submit-button,
+#reset-button {
+    padding: 8px 8 px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/*提交按鈕*/
+#submit-button{
+    background-color: lightblue;
+}
+
+/*重設按鈕*/
+#reset-button{
+    background-color: lightgreen;
+}
