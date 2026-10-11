@@ -2,8 +2,56 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <title>投資調查表</title>
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <h1>投資經驗調查表</h1>
+        <form>
+            <fieldset>
+                <legend>個人資料</legend>
+                <p>姓名：<input type="text" name="userName" size="50"></p>
+                <p>生日：<input type="date"></p>
+                <p>EMAIL：<input type="email" pattern=".+@gmail.com" 
+                            placeholder="bigpang@gmail.com" size="50" required></p>
+                <p>電話：<input type="tel" name="userPhone" pattern="09[0-9]{2}-[0-9]{3}-[0-9]{3}"
+                        placeholder="09xx-xxx-xxx" required></p>
+                <p>年齡：
+                    <input type="number" min="1" max="100" step="1">
+                </p>
+            </fieldset><br>
+            <fieldset>
+                <legend>個人投資</legend>
+                <p>每年預計投資金額（萬元）
+                    <input type="range" min="1" max="10000" step="1">
+                </p>
+                <p>你有多久的投資經驗？
+                    <input type="checkbox" name="invExper[]" value="exp1" checked>未滿3年
+                    <input type="checkbox" name="invExper[]" value="exp2">3~5年
+                    <input type="checkbox" name="invExper[]" value="exp3">6~9年
+                    <input type="checkbox" name="invExper[]" value="exp4">10年以上
+                </p>
+                <p>你投資時最常遇到哪些問題？<br>
+                <textarea name="userTrouble" cols="50" rows="5">資金不夠
+                </textarea></p>
+                <p>你投資過哪些商品？（可複選）
+                    <select name="invProd[]" size="6" multiple>
+                        <option value="股票" selected>股票
+                        <option value="債券">債券
+                        <option value="期貨">期貨
+                        <option value="貴金屬">貴金屬
+                        <option value="原物料">原物料
+                        <option value="ETF">ETF
+                    </select>
+                </p>
+            </fieldset>
+            <br>
+            <input type="submit" id="submit-button" value="提交">
+            <input type="reset" id="reset-button" value="重設">
+            <br>
+        </form>
+        <br>
+        <hr>
     <article>
         <p> 聯絡史丹大叔 </p>
        <address>
